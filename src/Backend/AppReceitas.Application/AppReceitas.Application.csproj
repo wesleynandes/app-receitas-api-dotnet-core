@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\AppReceitas.Comunicacao\AppReceitas.Comunicacao.csproj" />
+    <ProjectReference Include="..\..\Shared\AppReceitas.Exceptions\AppReceitas.Exceptions.csproj" />
+    <ProjectReference Include="..\AppReceitas.Domain\AppReceitas.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
