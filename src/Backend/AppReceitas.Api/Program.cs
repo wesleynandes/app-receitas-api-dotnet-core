@@ -1,3 +1,6 @@
+using AppReceitas.Domain.Extension;
+using AppReceitas.Infrastructure.Migrations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,4 +25,15 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+AtualizarBaseDeDados();
+
 app.Run();
+
+void AtualizarBaseDeDados()
+{
+    var conexao = builder.Configuration.GetConexao();
+    var nomeDataBase = builder.Configuration.GetNomeDataBase();
+
+
+    Database.CriarDatabase(conexao, nomeDataBase);
+}
